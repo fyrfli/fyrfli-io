@@ -10,3 +10,7 @@ steps:
       - "docker login gitea.fyrfli.io"
       - 'docker commit -a "Camille Frantz" -m "testing" fyrfli-io gitea.fyrfli.io/fyrfli/test'
       - "docker push gitea.fyrfli.io/fyrfli/test"
+
+services:
+  - name: docker
+    image: docker:dind
