@@ -7,3 +7,6 @@ steps:
     image: nginx:latest
     commands:
       - "cp -r index.html images scripts styles /usr/share/nginx/html"
+      - "docker login gitea.fyrfli.io"
+      - 'docker commit -a "Camille Frantz" -m "testing" fyrfli-io gitea.fyrfli.io/fyrfli/test'
+      - "docker push gitea.fyrfli.io/fyrfli/test"
