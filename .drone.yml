@@ -3,13 +3,8 @@ type: docker
 name: default
 
 steps:
-  - name: clone
-    image: alpine/git
-    commands:
-      - git clone https://gitea.fyrfli.io/fyrfli/fyrfli-io.git .
   - name: fyrfli-io
-    depends_on:
-      - clone
     image: nginx:latest
     commands:
+      - "git clone https://gitea.fyrfli.io/fyrfli/fyrfli-io"
       - "cp -r ./fyrfli-io/* /usr/share/nginx/html"
