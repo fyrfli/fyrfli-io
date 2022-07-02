@@ -6,5 +6,4 @@ steps:
   - name: fyrfli-io
     image: nginx:latest
     commands:
-      - "git clone https://gitea.fyrfli.io/fyrfli/fyrfli-io"
-      - "cp -r ./fyrfli-io/* /usr/share/nginx/html"
+      - "ls -R"
